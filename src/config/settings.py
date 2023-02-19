@@ -116,3 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MAILCHIMP_USERNAME = os.getenv('MAILCHIMP_USERNAME')
+MAILCHIMP_API_KEY = os.getenv('MAILCHIMP_API_KEY')
+MAILCHIMP_COMMON_LIST_ID = '123456'
