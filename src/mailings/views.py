@@ -18,6 +18,7 @@ def add_to_common_list_view(request):
     _add_email_to_mailchimp_audience(audience_id=settings.MAILCHIMP_COMMON_LIST_ID, email=email)
     subscriber_hash = _get_mailchimp_subscriber_hash(email)
     _add_mailchimp_tag(settings.MAILCHIMP_COMMON_LIST_ID, subscriber_hash=subscriber_hash, tag='COMMON TAG')  
+    
     CommonMailingList.objects.get_or_create(email=email)
 
     return JsonResponse({'success':True})
