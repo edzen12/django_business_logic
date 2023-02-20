@@ -9,7 +9,7 @@ class CommonMailingList(models.Model):
         db_table = 'common_mailing_list'
 
 
-class CommonMailingList(models.Model):
+class CaseMailingList(models.Model):
     """Рассылка на материалы конкретного дела"""
     email = models.EmailField('Email подписчика')
     case = models.ForeignKey(to='cases.Case', verbose_name="Дело", on_delete=models.CASCADE)
