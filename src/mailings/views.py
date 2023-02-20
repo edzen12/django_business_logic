@@ -2,7 +2,7 @@ from django.http import JsonResponse
  
 from .services import add_email_to_common_mailchimp_list, add_email_to_case_mailchimp_list
 
-def add_to_common_list_view(request):
+def add_email_to_common_mailchimp_list_view(request):
     """веб-сервис добавляющий email в общий лист рассылки"""
 
     email = request.GET.get('email')
@@ -12,7 +12,7 @@ def add_to_common_list_view(request):
     return JsonResponse({'success':True})
 
 
-def add_to_case_list_view(request):
+def add_email_to_case_mailchimp_list_view(request):
     """веб-сервис добавляющий email в лист рассылок по конкретному делу"""
 
     email = request.GET.get('email')
